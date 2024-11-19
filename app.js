@@ -8,6 +8,7 @@ import contactRoutes from './routes/contact.js';
 import distanceRoutes from './routes/distance.js';
 import dotenv from 'dotenv';
 dotenv.config();
+const allowedOrigins = ['http://localhost:3000', 'https://personal-website-c38b3.web.app'];
 
 const app = express();
 
@@ -18,7 +19,7 @@ const limiter = rateLimit({
     message: 'Too many requests from this IP, please try again after 15 minutes'
   });
 
-app.use(cors({ origin: 'http://localhost:3000' })); // Allow requests from React's dev server
+app.use(cors({ origin: allowedOrigins })); // Allow requests from React's dev server
 
 app.use(express.json()); // Middleware to parse JSON
 
