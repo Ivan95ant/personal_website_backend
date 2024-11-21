@@ -8,7 +8,7 @@ import contactRoutes from './routes/contact.js';
 import distanceRoutes from './routes/distance.js';
 import dotenv from 'dotenv';
 dotenv.config();
-const allowedOrigins = ['http://localhost:3000', 'https://personal-website-c38b3.web.app'];
+const allowedOrigins = ['http://localhost:3000', 'https://personal-website-c38b3.web.app', 'https://ivanantonov.com','https://www.ivanantonov.com','ivanantonov.com','www.ivanantonov.com'];
 
 const app = express();
 
